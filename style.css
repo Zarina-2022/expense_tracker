@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(87, 75, 75);
+  display: grid;
+  place-items: center;
+  font-family: "Inconsolata", monospace;
+}
+.heading {
+  color: aquamarine;
+  text-shadow: 2px 2px 20px rgb(127, 255, 212);
+  letter-spacing: 2px;
+}
+.container {
+  min-width: 60vw;
+  min-height: 80vh;
+  height: 70vh;
+  background-color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border-radius: 5px;
+}
+.greet {
+  font-size: 25px;
+  align-self: start;
+}
+.greet input {
+  border: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Inconsolata", monospace;
+  color: rgb(142, 66, 212);
+}
+
+/* Form alani */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.double {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 40px;
+}
+.form-expense,
+.form-price {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline-color: aquamarine;
+}
+.add-btn {
+  padding: 10px 40px;
+  border-radius: 5px;
+  background-color: rgb(238, 133, 133);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Total expense */
+.total {
+  background-color: rgb(20, 107, 78);
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+.total span {
+  color: rgb(255, 174, 0);
+  font-size: 20px;
+}
+/* Expense-list */
+
+.expense-container {
+  overflow: auto;
+}
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.expenditure {
+  width: 600px;
+  padding: 10px;
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(240, 6, 6, 0.78);
+  transition: all ease 0.5s;
+}
+/* animation for deleted item */
+.fall {
+  transform: translateY(100px) rotateZ(20deg);
+  opacity: 0;
+}
+
+.expense-price {
+  color: rgb(216, 34, 34);
+}
+.expense-buttons {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 60px;
+  gap: 20px;
+}
+
+/* odenen itemin style'i */
+.paid {
+  box-shadow: 0 0 10px 0 rgba(37, 179, 73, 0.78);
+}
+.paid .expense-title{
+    text-decoration: line-through 3px green ;
+  }
+  .paid .expense-price{
+    color: green;
+  }
+
+  /* Select bolumu */
+
+  /* Reset Select */
+  select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      outline: 0;
+      box-shadow: none;
+      border: 0 !important;
+      background: #2c3e50;
+      background-image: none;
+  }
+  
+  /* Remove IE arrow */
+  select::-ms-expand {
+      display: none;
+  }
+  
+  /* Custom Select */
+  .select {
+      position: relative;
+      display: flex;
+      width: 20em;
+      height: 3em;
+      line-height: 3;
+      background: #2c3e50;
+      overflow: hidden;
+      border-radius: .25em;
+  }
+  
+  select {
+      flex: 1;
+      padding: 0 .5em;
+      color: #fff;
+      cursor: pointer;
+  }
+  
+  /* Arrow */
+  .select::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 1em;
+      background: #34495e;
+      cursor: pointer;
+      pointer-events: none;
+      transition: .25s all ease;
+  }

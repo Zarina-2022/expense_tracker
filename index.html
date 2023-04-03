@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="expense-icon.png" />
+    <title>Expense App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <h1 class="heading">Expense calculator</h1>
+    <div class="container">
+      <h3 class="greet">
+        Welcome,
+        <input id="input-name" type="text" placeholder="Write here your name" />
+      </h3>
+      <form>
+        <!--   form ust kisim -->
+        <div class="double">
+          <div class="form-expense">
+            <label for="expense">Expence:</label>
+            <input id="expense" type="text" placeholder="Expense name" />
+          </div>
+          <div class="form-price">
+            <label for="price">Price:</label>
+            <input id="price" type="number" placeholder="0" />
+          </div>
+        </div>
+        <!--   form alt kisim -->
+        <div class="double">
+          <div class="form-state">
+            <input id="state" type="checkbox" />
+            <label for="state">Paid</label>
+          </div>
+          <button class="add-btn">Add</button>
+        </div>
+      </form>
+
+      <!--  Formlarin alt kismi (hesap bolumu)  -->
+
+      <!--  Total expense  -->
+      <div class="total">
+        Total expenditure: <span id="total-price">0</span> &#8378;
+      </div>
+
+      <!--  Select bolumu  -->
+
+      <div class="select">
+        <select name="slct" id="slct">
+          <option selected disabled>Choose an option</option>
+          <option value="everythingIsPaid">All</option>
+          <option value="alreadyPaid">Paid</option>
+          <option value="notPaidYet">Not-paid</option>
+        </select>
+      </div>
+
+      <!--  The expense list -->
+      <div class="expense-container">
+        <div id="expense-list"></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
